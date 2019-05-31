@@ -1,4 +1,4 @@
-# Oh My WeChat
+# Oh My WeChat For WeChatExtension-ForMac
 
 这是为 [MustangYM/WeChatExtension-ForMac](https://github.com/MustangYM/WeChatExtension-ForMac)（后面称呼为“小助手”）开发的安装/更新工具。
 
