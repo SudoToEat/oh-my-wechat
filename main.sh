@@ -124,7 +124,7 @@ uninstall_plugin() {
     # 确保有当前版本的小助手安装包
     download ${current_version} "卸载小助手时需要先下载小助手的安装包"
     # 运行卸载脚本
-    ./WeChatPlugin-MacOS-${current_version}/Other/Uninstall.sh
+    ./WeChatPlugin-MacOS-${current_version}/Rely/Uninstall.sh
     echo_with_date "微信小助手卸载完成"
     if [[ ${is_wechat_running} != "0" ]]; then
       echo_with_date "检测到微信正在运行，需要重启微信才能关闭小助手"
