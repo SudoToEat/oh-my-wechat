@@ -29,7 +29,7 @@ work_dir="${HOME}/.oh_my_wechat"
 cd ${work_dir}
 
 # 记录小助手的版本的文件地址，同时也可以用来判断小助手有没有被安装
-version_plist_path="${wechat_path}/Contents/MacOS/WeChatPlugin.framework/Resources/Info.plist"
+version_plist_path="${wechat_path}/Contents/MacOS/WeChatExtension.framework/Resources/Info.plist"
 
 # 已经下载过的安装包版本，同时当微信自动更新导致小助手被删除时，作为上一次安装过的版本号使用
 downloaded_version=$(find . -maxdepth 1 -type d -name 'WeChatExtension-ForMac-*' -print -quit | grep -o '\d\{1,\}\.\d\{1,\}\.\d\{1,\}')
