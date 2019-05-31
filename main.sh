@@ -124,7 +124,7 @@ uninstall_plugin() {
     # 确保有当前版本的小助手安装包
     download ${current_version} "卸载小助手时需要先下载小助手的安装包"
     # 运行卸载脚本
-    ./WeChatPlugin-MacOS-${current_version}/Rely/Uninstall.sh
+    ./WeChatExtension-ForMac-${current_version}/WeChatExtension/Rely/Uninstall.sh
     echo_with_date "微信小助手卸载完成"
     if [[ ${is_wechat_running} != "0" ]]; then
       echo_with_date "检测到微信正在运行，需要重启微信才能关闭小助手"
@@ -174,12 +174,12 @@ install() {
 
     # 删除之前已经下载（一般是旧版本）的安装包
     if [[ ! -z ${downloaded_version} ]] && [[ ${_version} != ${downloaded_version} ]]; then
-      rm -rf ./WeChatPlugin-MacOS-${downloaded_version}
+      rm -rf ./WeChatExtension-ForMac-${downloaded_version}
       echo_with_date "已删除 v${downloaded_version} 的安装包"
     fi
 
     echo_with_date "开始安装微信小助手……"
-    ./WeChatPlugin-MacOS-${_version}/Rely/Install.sh
+    ./WeChatExtension-ForMac-${_version}/WeChatExtension/Rely/Install.sh
     echo_with_date "微信小助手安装完成。"
     installed="1"
   fi
