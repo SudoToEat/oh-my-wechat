@@ -4,10 +4,9 @@
 
 ## 注意！！
 
-目前 [TKkk-iOSer/WeChatPlugin-MacOS](https://github.com/TKkk-iOSer/WeChatPlugin-MacOS) 已经删库了，之前的omw[lmk123/oh-my-wechat](https://github.com/lmk123/oh-my-wechat)是从 [Releases](https://github.com/TKkk-iOSer/WeChatPlugin-MacOS/releases) 里下载安装包的，所以只要 Releases 里的文件还在，Oh My WeChat 就可以正常使用。
+之前的[lmk123/oh-my-wechat](https://github.com/lmk123/oh-my-wechat)是从 [TKkk-iOSer/WeChatPlugin-MacOS](https://github.com/TKkk-iOSer/WeChatPlugin-MacOS) 下载的, 但原版已经删库了。  
 这个修改的omw是从仍然在更新的[MustangYM/WeChatExtension-ForMac](https://github.com/MustangYM/WeChatExtension-ForMac)中下载的。
 
-为了避免 Releases 里的文件也被删除，建议大家自行下载安装包，然后使用 `omw load` 命令安装，具体方法请参考下面的 [omw load](#omw-load) 一节。
 
 ## 安装 Oh My WeChat
 
@@ -43,7 +42,7 @@ $ omw
 
 用 omw 从 GitHub 上下载安装包可能会非常慢，所以 Oh My WeChat 还提供了这条命令，可以直接将小助手的安装包导入到 Oh My WeChat 里。
 
-你可以用浏览器打开[小助手的最新版本发布页](https://github.com/MustangYM/WeChatExtension-ForMac/releases/latest)，然后点击 _Source code (zip)_ 将安装包下载下来，目前小助手的最新版本是 v1.8.6，所以此时你的*下载文件夹*内会有一个 _WeChatExtension-ForMac-1.8.7.zip_ 安装包。
+你可以用浏览器打开[小助手的最新版本发布页](https://github.com/MustangYM/WeChatExtension-ForMac/releases/latest)，然后点击 _Source code (zip)_ 将安装包下载下来，目前小助手的最新版本是 v1.8.7，所以此时你的*下载文件夹*内会有一个 _WeChatExtension-ForMac-1.8.7.zip_ 安装包。
 
 接下来，你可以在终端内运行下面这条命令导入安装包：
 
