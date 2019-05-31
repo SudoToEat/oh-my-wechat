@@ -179,7 +179,7 @@ install() {
     fi
 
     echo_with_date "开始安装微信小助手……"
-    ./WeChatPlugin-MacOS-${_version}/Other/Install.sh
+    ./WeChatPlugin-MacOS-${_version}/Rely/Install.sh
     echo_with_date "微信小助手安装完成。"
     installed="1"
   fi
