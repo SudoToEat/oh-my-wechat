@@ -60,7 +60,7 @@ download() {
     echo_with_date "如果下载速度很慢，建议通过其它方式下载安装包，然后使用 omw load 命令导入"
     echo_with_date "详情请参阅文档 https://github.com/lmk123/oh-my-wechat#omw-load"
     # 下载压缩包
-    curl --retry 2 -L -o ${1}.zip https://github.com/TKkk-iOSer/WeChatPlugin-MacOS/archive/v${1}.zip
+    curl --retry 2 -L -o ${1}.zip https://github.com/MustangYM/WeChatExtension-ForMac/archive/v${1}.zip
     if [[ 0 -eq $? ]]; then
       # 解压为同名文件夹
       unzip -o -q ${1}.zip
@@ -155,7 +155,7 @@ install() {
       echo_with_date "未安装微信小助手，也没有下载过安装包，所以即使使用了 -n 参数，仍需要检查并下载新版本"
     fi
     echo_with_date "正在查询新版本……"
-    latest_version=$(curl --retry 2 -I -s https://github.com/TKkk-iOSer/WeChatPlugin-MacOS/releases/latest | grep Location | sed -n 's/.*\/v\(.*\)/\1/p')
+    latest_version=$(curl --retry 2 -I -s https://github.com/MustangYM/WeChatExtension-ForMac/releases/latest | grep Location | sed -n 's/.*\/v\(.*\)/\1/p')
     if [[ -z "$latest_version" ]]; then
       echo_with_date "查询新版本时失败，请稍后重试"
       exit 1
