@@ -32,7 +32,7 @@ cd ${work_dir}
 version_plist_path="${wechat_path}/Contents/MacOS/WeChatPlugin.framework/Resources/Info.plist"
 
 # 已经下载过的安装包版本，同时当微信自动更新导致小助手被删除时，作为上一次安装过的版本号使用
-downloaded_version=$(find . -maxdepth 1 -type d -name 'WeChatPlugin-MacOS-*' -print -quit | grep -o '\d\{1,\}\.\d\{1,\}\.\d\{1,\}')
+downloaded_version=$(find . -maxdepth 1 -type d -name 'WeChatExtension-ForMac-*' -print -quit | grep -o '\d\{1,\}\.\d\{1,\}\.\d\{1,\}')
 
 # 用 current_version 记录小助手的当前版本
 if [[ -f ${version_plist_path} ]]; then
@@ -51,7 +51,7 @@ is_wechat_running="${is_wechat_running%"${is_wechat_running##*[![:space:]]}"}"
 
 # 下载指定版本的小助手
 download() {
-  if [[ ! -e "WeChatPlugin-MacOS-${1}" ]]; then
+  if [[ ! -e "WeChatExtension-ForMac-${1}" ]]; then
     # 第二个参数作为要打印的消息
     if [[ -n ${2} ]]; then
       echo_with_date ${2}
@@ -235,7 +235,7 @@ fi
 
 # omw load [version]
 if [[ $1 == "load" ]]; then
-  _file_name="WeChatPlugin-MacOS-${2}.zip"
+  _file_name="WeChatExtension-ForMac-${2}.zip"
   _file_path="${initial_pwd}/${_file_name}"
   if [[ -e ${_file_path} ]]; then
     # 解压到工作目录下
@@ -244,7 +244,7 @@ if [[ $1 == "load" ]]; then
 
     # 删除已有的安装包
     if [[ ! -z ${downloaded_version} ]] && [[ ${2} != ${downloaded_version} ]]; then
-      rm -rf "./WeChatPlugin-MacOS-${downloaded_version}"
+      rm -rf "./WeChatExtension-ForMac-${downloaded_version}"
       echo_with_date "已删除 v${downloaded_version} 的安装包"
     fi
   else
